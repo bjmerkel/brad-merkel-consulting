@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brad Merkel — Fractional Product Leadership</title>
+<meta name="description" content="Fractional product leadership for AI startups. 15+ years embedding AI into sales and customer-service operations for 15,000+ SMBs.">
+<style>
+  :root {
+    --ink: #1a1d23;
+    --muted: #5b6472;
+    --accent: #2563eb;
+    --accent-dark: #1d4ed8;
+    --bg: #ffffff;
+    --wash: #f4f6fb;
+    --line: #e5e9f2;
+    --radius: 14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1020px; margin: 0 auto; padding: 0 24px; }
+  header.hero {
+    padding: 96px 0 72px;
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+    color: #fff;
+  }
+  header.hero .kicker {
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #93c5fd;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  header.hero h1 {
+    font-size: clamp(34px, 5.4vw, 58px);
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+    max-width: 760px;
+    margin-bottom: 22px;
+  }
+  header.hero p.lede {
+    font-size: clamp(17px, 2.2vw, 21px);
+    color: #cbd5e1;
+    max-width: 640px;
+    margin-bottom: 36px;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 14px 30px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background .2s;
+  }
+  .btn:hover { background: var(--accent-dark); }
+  .btn.ghost {
+    background: transparent;
+    border: 1.5px solid #475569;
+    color: #e2e8f0;
+    margin-left: 12px;
+  }
+  .btn.ghost:hover { border-color: #94a3b8; background: rgba(255,255,255,.06); }
+  section { padding: 72px 0; }
+  section.alt { background: var(--wash); }
+  h2 {
+    font-size: clamp(26px, 3.4vw, 36px);
+    letter-spacing: -0.8px;
+    margin-bottom: 14px;
+  }
+  .section-sub { color: var(--muted); font-size: 18px; max-width: 640px; margin-bottom: 40px; }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 18px;
+  }
+  .stat {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+  }
+  .stat .num {
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .stat .lbl { color: var(--muted); font-size: 15px; }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px 26px;
+  }
+  .card h3 { font-size: 19px; margin-bottom: 10px; letter-spacing: -0.3px; }
+  .card p { color: var(--muted); font-size: 15.5px; }
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; counter-reset: step; }
+  .step {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 26px 24px;
+  }
+  .step .n {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 14px;
+  }
+  .step h3 { font-size: 17px; margin-bottom: 8px; }
+  .step p { color: var(--muted); font-size: 15px; }
+  .about { display: grid; grid-template-columns: 1fr; gap: 24px; max-width: 720px; }
+  .about p { color: var(--muted); font-size: 17px; }
+  .about p strong { color: var(--ink); }
+  .cta {
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+    color: #fff;
+    text-align: center;
+    border-radius: 20px;
+    padding: 64px 32px;
+  }
+  .cta h2 { margin-bottom: 12px; }
+  .cta p { color: #cbd5e1; max-width: 520px; margin: 0 auto 32px; font-size: 17px; }
+  .cta .btn.ghost { border-color: #475569; }
+  footer {
+    padding: 36px 0;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  @media (max-width: 560px) {
+    .btn.ghost { margin-left: 0; margin-top: 12px; }
+    section { padding: 52px 0; }
+    header.hero { padding: 64px 0 52px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker">Fractional Product Leadership</span>
+    <h1>I help AI startups ship product that works in the real world.</h1>
+    <p class="lede">15+ years embedding AI into sales and customer-service operations for 15,000+ SMBs. Now I do it fractionally for founding teams that need a product leader before they can hire one.</p>
+    <a class="btn" href="mailto:brad.merkel@gmail.com?subject=Fractional%20product%20help">Book a 20-minute intro call</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/afterplots/">Connect on LinkedIn</a>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Results I carry with me</h2>
+    <p class="section-sub">A decade and a half of product ownership, measured the way founders care about: customers kept, revenue grown, time saved.</p>
+    <div class="stats">
+      <div class="stat"><div class="num">15,000+</div><div class="lbl">SMB customers served by products I led</div></div>
+      <div class="stat"><div class="num">+60%</div><div class="lbl">Customer satisfaction increase</div></div>
+      <div class="stat"><div class="num">$10M+</div><div class="lbl">Lifetime revenue from products I owned</div></div>
+      <div class="stat"><div class="num">&minus;60%</div><div class="lbl">Reduction in time-to-close for sales teams</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>What I do for you</h2>
+    <p class="section-sub">Pick the lane you need, or hand me the whole product function. I embed with your team a few days a week and operate like a co-founder with a product title.</p>
+    <div class="cards">
+      <div class="card"><h3>AI roadmap &amp; product strategy</h3><p>Turn a pile of AI ideas into a sequenced roadmap tied to revenue. Know what to build, what to buy, and what to skip.</p></div>
+      <div class="card"><h3>Customer discovery</h3><p>Structured conversations with your buyers that surface the real jobs-to-be-done — not the feature requests they shout loudest about.</p></div>
+      <div class="card"><h3>0-to-1 product process</h3><p>Stand up the rituals, specs, and decision cadence that take you from founder-driven chaos to a team that ships every week.</p></div>
+      <div class="card"><h3>AI in sales operations</h3><p>I've spent 15 years putting AI inside sales workflows — qualification, follow-up, close. I know where automation earns trust and where it breaks it.</p></div>
+      <div class="card"><h3>AI in customer service</h3><p>Agents, deflection, and support tooling that customers actually accept. CSAT up 60% and churn under 3% is the track record, not the pitch.</p></div>
+      <div class="card"><h3>GTM &amp; growth infrastructure</h3><p>Landing pages, outreach automation, and engagement tracking that turn a pre-product startup into a pipeline — cheaply, before you scale spend.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="section-sub">Simple on purpose. No retainers with fine print, no six-month lock-ins.</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Intro call</h3><p>20 minutes. You tell me where the product stands and what's stuck. I tell you honestly whether I can help.</p></div>
+      <div class="step"><div class="n">2</div><h3>Scoped engagement</h3><p>We agree on the outcomes, the days per week, and the price. Clear scope, in writing, before anything starts.</p></div>
+      <div class="step"><div class="n">3</div><h3>Embedded delivery</h3><p>I join your standups, your customer calls, your roadmap reviews. Month to month — I earn the next month every month.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="about">
+      <div>
+        <h2>Who I am</h2>
+        <p><strong>Brad Merkel.</strong> Lead Product Manager at Reputation Boost since 2010, where I own the AI roadmap for a platform serving 15,000+ small businesses — and carry quota doing full-cycle sales myself, so the product decisions I make have to survive real customer conversations.</p>
+        <p>I'm also a two-time founder (Afterplots, Clevrads), which is why I work well with founding teams: I've sat in the seat where every dollar and every week counts. References and full work history available on request.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta">
+      <h2>Need a product leader before you can hire one?</h2>
+      <p>Tell me where your product stands and what's stuck. If I'm not the right fit, I'll tell you that too — and point you at who is.</p>
+      <a class="btn" href="mailto:brad.merkel@gmail.com?subject=Fractional%20product%20help">Email Brad</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/afterplots/">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;width:100%;padding:0;">
+    <span>© 2026 Brad Merkel · Fractional Product Leadership</span>
+    <span><a href="mailto:brad.merkel@gmail.com">brad.merkel@gmail.com</a> · <a href="https://www.linkedin.com/in/afterplots/">LinkedIn</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
